@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photobooth</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📸 Photobooth</h1>
+    <p class="subtitle">Take 3 photos, pick a frame, save your strip.</p>
+  </header>
+
+  <main>
+    <section class="camera-panel">
+      <div class="video-wrap">
+        <video id="video" autoplay playsinline muted></video>
+        <div id="countdown" class="countdown hidden">3</div>
+        <div id="flash" class="flash"></div>
+      </div>
+
+      <div class="camera-controls">
+        <select id="cameraSelect" title="Choose camera"></select>
+        <button id="startBtn" class="btn primary">Start Camera</button>
+        <button id="captureBtn" class="btn primary" disabled>Take 3 Photos</button>
+        <button id="retakeBtn" class="btn" disabled>Retake</button>
+      </div>
+
+      <div class="shots">
+        <div class="shot" data-index="0"><span>1</span></div>
+        <div class="shot" data-index="1"><span>2</span></div>
+        <div class="shot" data-index="2"><span>3</span></div>
+      </div>
+    </section>
+
+    <section class="frame-panel">
+      <h2>Frame Template</h2>
+      <div id="frameOptions" class="frame-options"></div>
+
+      <label class="upload-label">
+        Or upload your own frame (transparent PNG, 600×1800 recommended)
+        <input type="file" id="frameUpload" accept="image/png,image/svg+xml,image/webp">
+      </label>
+
+      <h2>Preview</h2>
+      <div class="strip-wrap">
+        <canvas id="stripCanvas" width="600" height="1800"></canvas>
+      </div>
+
+      <button id="downloadBtn" class="btn success" disabled>Save to Downloads</button>
+    </section>
+  </main>
+
+  <canvas id="captureCanvas" class="hidden"></canvas>
+
+  <script src="app.js"></script>
+</body>
+</html>

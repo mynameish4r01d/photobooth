@@ -1,0 +1,5 @@
+[
+  { "name": "Classic", "url": "frames/classic.svg" },
+  { "name": "Polaroid", "url": "frames/polaroid.svg" },
+  { "name": "Confetti", "url": "frames/confetti.svg" }
+]

@@ -1,0 +1,204 @@
+:root {
+  --bg: #16151d;
+  --panel: #201f29;
+  --accent: #ff5da2;
+  --accent2: #7c5cff;
+  --text: #f2f1f7;
+  --muted: #9b98ab;
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: radial-gradient(circle at top, #26243a, var(--bg));
+  color: var(--text);
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding: 32px 16px 8px;
+}
+
+header h1 { margin: 0; font-size: 2rem; }
+.subtitle { color: var(--muted); margin: 6px 0 0; }
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  padding: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.camera-panel, .frame-panel {
+  background: var(--panel);
+  border-radius: var(--radius);
+  padding: 20px;
+  flex: 1 1 420px;
+  min-width: 320px;
+}
+
+.video-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: #000;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scaleX(-1); /* mirror for natural selfie feel */
+}
+
+.countdown {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 4px 20px rgba(0,0,0,.6);
+}
+.countdown.hidden { display: none; }
+
+.flash {
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  opacity: 0;
+  pointer-events: none;
+}
+.flash.active {
+  animation: flashPop .35s ease-out;
+}
+@keyframes flashPop {
+  0% { opacity: .9; }
+  100% { opacity: 0; }
+}
+
+.camera-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+select {
+  background: #2b2a38;
+  color: var(--text);
+  border: 1px solid #3a3948;
+  border-radius: 8px;
+  padding: 8px 10px;
+  flex: 1 1 100%;
+}
+
+.btn {
+  background: #2b2a38;
+  color: var(--text);
+  border: 1px solid #3a3948;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: .95rem;
+  transition: transform .1s ease, background .2s ease;
+}
+.btn:hover:not(:disabled) { transform: translateY(-1px); }
+.btn:disabled { opacity: .4; cursor: not-allowed; }
+.btn.primary { background: linear-gradient(135deg, var(--accent), var(--accent2)); border: none; }
+.btn.success { background: #2fbf71; border: none; width: 100%; margin-top: 14px; padding: 12px; font-weight: 600; }
+
+.shots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.shot {
+  aspect-ratio: 4 / 3;
+  background: #14131a;
+  border: 2px dashed #3a3948;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  overflow: hidden;
+  position: relative;
+}
+.shot img { width: 100%; height: 100%; object-fit: cover; }
+.shot span { font-size: 1.2rem; }
+.shot.filled { border-style: solid; border-color: var(--accent2); }
+
+.frame-panel h2 {
+  font-size: 1.05rem;
+  margin: 0 0 10px;
+}
+
+.frame-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.frame-option {
+  border: 2px solid transparent;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #14131a;
+  aspect-ratio: 1 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.frame-option img { width: 100%; height: 100%; object-fit: contain; }
+.frame-option.selected { border-color: var(--accent); }
+.frame-option.none {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: .75rem;
+  text-align: center;
+  padding: 4px;
+}
+
+.upload-label {
+  display: block;
+  font-size: .82rem;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+.upload-label input { display: block; margin-top: 6px; }
+
+.strip-wrap {
+  background: #0e0d13;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+#stripCanvas {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  border-radius: 4px;
+  background: #1c1b24;
+}
+
+.hidden { display: none !important; }
