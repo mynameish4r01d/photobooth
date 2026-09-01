@@ -9,7 +9,7 @@
 <body>
   <header>
     <h1>📸 Photobooth</h1>
-    <p class="subtitle">Take 3 photos, pick a frame, save your strip.</p>
+    <p class="subtitle">Take 4 photos, pick a frame, save your strip.</p>
   </header>
 
   <main>
@@ -23,7 +23,7 @@
       <div class="camera-controls">
         <select id="cameraSelect" title="Choose camera"></select>
         <button id="startBtn" class="btn primary">Start Camera</button>
-        <button id="captureBtn" class="btn primary" disabled>Take 3 Photos</button>
+        <button id="captureBtn" class="btn primary" disabled>Take 4 Photos</button>
         <button id="retakeBtn" class="btn" disabled>Retake</button>
       </div>
 
@@ -31,6 +31,7 @@
         <div class="shot" data-index="0"><span>1</span></div>
         <div class="shot" data-index="1"><span>2</span></div>
         <div class="shot" data-index="2"><span>3</span></div>
+        <div class="shot" data-index="3"><span>4</span></div>
       </div>
     </section>
 
@@ -39,13 +40,13 @@
       <div id="frameOptions" class="frame-options"></div>
 
       <label class="upload-label">
-        Or upload your own frame (transparent PNG, 600×1800 recommended)
+        Or upload your own frame (transparent PNG, 600×2040 recommended)
         <input type="file" id="frameUpload" accept="image/png,image/svg+xml,image/webp">
       </label>
 
       <h2>Preview</h2>
       <div class="strip-wrap">
-        <canvas id="stripCanvas" width="600" height="1800"></canvas>
+        <canvas id="stripCanvas" width="600" height="2040"></canvas>
       </div>
 
       <button id="downloadBtn" class="btn success" disabled>Save to Downloads</button>

@@ -1,15 +1,13 @@
 // ---- Layout constants (must match the frame SVGs in /frames) ----
+const PHOTO_COUNT = 4;
 const STRIP_W = 600;
-const STRIP_H = 1800;
 const PAD = 40;
 const PHOTO_W = STRIP_W - PAD * 2; // 520
 const PHOTO_H = Math.round(PHOTO_W * 3 / 4); // 390, 4:3
 const GAP = 30;
-const PHOTO_Y = [
-  PAD,
-  PAD + PHOTO_H + GAP,
-  PAD + (PHOTO_H + GAP) * 2,
-];
+const FOOTER_H = 350;
+const PHOTO_Y = Array.from({ length: PHOTO_COUNT }, (_, i) => PAD + i * (PHOTO_H + GAP));
+const STRIP_H = PHOTO_Y[PHOTO_COUNT - 1] + PHOTO_H + FOOTER_H;
 
 const video = document.getElementById('video');
 const cameraSelect = document.getElementById('cameraSelect');
@@ -27,7 +25,7 @@ const captureCanvas = document.getElementById('captureCanvas');
 const downloadBtn = document.getElementById('downloadBtn');
 
 let stream = null;
-let shots = [null, null, null]; // ImageBitmap-ready <img> elements
+let shots = Array(PHOTO_COUNT).fill(null); // data URLs
 let frames = []; // [{name, url}]
 let selectedFrameUrl = null;
 let selectedFrameImg = null;
@@ -106,13 +104,13 @@ function flash() {
   flashEl.classList.add('active');
 }
 
-async function takeThreePhotos() {
+async function takeAllPhotos() {
   captureBtn.disabled = true;
   retakeBtn.disabled = true;
-  shots = [null, null, null];
+  shots = Array(PHOTO_COUNT).fill(null);
   shotsEls.forEach(el => { el.innerHTML = `<span>${+el.dataset.index + 1}</span>`; el.classList.remove('filled'); });
 
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < PHOTO_COUNT; i++) {
     await runCountdown(3);
     flash();
     const dataUrl = grabFrame();
@@ -131,9 +129,9 @@ async function takeThreePhotos() {
   renderStrip();
 }
 
-captureBtn.addEventListener('click', takeThreePhotos);
+captureBtn.addEventListener('click', takeAllPhotos);
 retakeBtn.addEventListener('click', () => {
-  shots = [null, null, null];
+  shots = Array(PHOTO_COUNT).fill(null);
   shotsEls.forEach(el => { el.innerHTML = `<span>${+el.dataset.index + 1}</span>`; el.classList.remove('filled'); });
   renderStrip();
 });
@@ -250,6 +248,8 @@ downloadBtn.addEventListener('click', () => {
 
 // ---------- Init ----------
 (async function init() {
+  stripCanvas.width = STRIP_W;
+  stripCanvas.height = STRIP_H;
   renderStrip();
   await loadFrameManifest();
   try {
