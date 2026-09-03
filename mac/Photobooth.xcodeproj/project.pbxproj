@@ -1,0 +1,392 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0109EA0DE0A04C8C97911C87 /* BoothViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181A771531B9E630648D5704 /* BoothViewModel.swift */; };
+		1EB515D56DBC66031501B429 /* StripLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76701E5D5A72E5A2186687EB /* StripLayout.swift */; };
+		3CCB9288697D1F7E3341071F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81B34D5687448FED7561C683 /* Assets.xcassets */; };
+		57065644724E58B42FE3C106 /* StripCompositor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC20D5A873EDB79075242C /* StripCompositor.swift */; };
+		5E1CCDBE26878F93F78B0416 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807D74B3E09CEED58F614EAD /* CameraManager.swift */; };
+		90DB8FF4B801CC37F134F3DC /* FrameTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFACF9777707CB1419934209 /* FrameTemplate.swift */; };
+		9CB62AC67ED83CA5804D60DB /* PhotoboothApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4C92C51A5E5E754E521464 /* PhotoboothApp.swift */; };
+		A6D6F972EF59CBBF1F1800D3 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A480D0F1614885A8D12D177C /* CameraPreviewView.swift */; };
+		B46C56C6CA83C1B079856DC1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FC724B1A3741C28B2BB2DC /* ContentView.swift */; };
+		EA4CBA6312629412F3889DB3 /* ConfettiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5548D549FBFB63AB8B35F8A4 /* ConfettiData.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0CBC20D5A873EDB79075242C /* StripCompositor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripCompositor.swift; sourceTree = "<group>"; };
+		181A771531B9E630648D5704 /* BoothViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoothViewModel.swift; sourceTree = "<group>"; };
+		5548D549FBFB63AB8B35F8A4 /* ConfettiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfettiData.swift; sourceTree = "<group>"; };
+		76701E5D5A72E5A2186687EB /* StripLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripLayout.swift; sourceTree = "<group>"; };
+		807D74B3E09CEED58F614EAD /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		81B34D5687448FED7561C683 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		96FC724B1A3741C28B2BB2DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9C4C92C51A5E5E754E521464 /* PhotoboothApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoboothApp.swift; sourceTree = "<group>"; };
+		A480D0F1614885A8D12D177C /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
+		AFACF9777707CB1419934209 /* FrameTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameTemplate.swift; sourceTree = "<group>"; };
+		F85D578D064ABBA342053EF0 /* Photobooth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photobooth.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		01D84CCB2F25FD7352D69435 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				181A771531B9E630648D5704 /* BoothViewModel.swift */,
+				5548D549FBFB63AB8B35F8A4 /* ConfettiData.swift */,
+				AFACF9777707CB1419934209 /* FrameTemplate.swift */,
+				76701E5D5A72E5A2186687EB /* StripLayout.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		26E941332D83000DD4FA39B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F85D578D064ABBA342053EF0 /* Photobooth.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A6971C3449BE7BE60FE7FB7 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				807D74B3E09CEED58F614EAD /* CameraManager.swift */,
+				A480D0F1614885A8D12D177C /* CameraPreviewView.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		39DDE7119333981530E0D7CF /* Photobooth */ = {
+			isa = PBXGroup;
+			children = (
+				A7A0FC48022066BDDE65CDEA /* App */,
+				2A6971C3449BE7BE60FE7FB7 /* Camera */,
+				EF9EDE2D8A9CFCEA9301C8BE /* Compositing */,
+				01D84CCB2F25FD7352D69435 /* Models */,
+				BFA98E1106C67A0122199B29 /* Resources */,
+				69D6EEFB61B51D2E1C4162F0 /* Views */,
+			);
+			path = Photobooth;
+			sourceTree = "<group>";
+		};
+		4A4752C5FEA14D3A236DD9A2 = {
+			isa = PBXGroup;
+			children = (
+				39DDE7119333981530E0D7CF /* Photobooth */,
+				26E941332D83000DD4FA39B9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		69D6EEFB61B51D2E1C4162F0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				96FC724B1A3741C28B2BB2DC /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A7A0FC48022066BDDE65CDEA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9C4C92C51A5E5E754E521464 /* PhotoboothApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		BFA98E1106C67A0122199B29 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				81B34D5687448FED7561C683 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EF9EDE2D8A9CFCEA9301C8BE /* Compositing */ = {
+			isa = PBXGroup;
+			children = (
+				0CBC20D5A873EDB79075242C /* StripCompositor.swift */,
+			);
+			path = Compositing;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		069C5AB88BA79435BB36821B /* Photobooth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AE6C342CDF14534EC03B179 /* Build configuration list for PBXNativeTarget "Photobooth" */;
+			buildPhases = (
+				3194046114811F2786935FFD /* Sources */,
+				3B0FF038C2FF20B9976A499D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Photobooth;
+			packageProductDependencies = (
+			);
+			productName = Photobooth;
+			productReference = F85D578D064ABBA342053EF0 /* Photobooth.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63A721B30C25217930E46266 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					069C5AB88BA79435BB36821B = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = E53DACA68615C092A1AF09BD /* Build configuration list for PBXProject "Photobooth" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 4A4752C5FEA14D3A236DD9A2;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 26E941332D83000DD4FA39B9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				069C5AB88BA79435BB36821B /* Photobooth */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B0FF038C2FF20B9976A499D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CCB9288697D1F7E3341071F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3194046114811F2786935FFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0109EA0DE0A04C8C97911C87 /* BoothViewModel.swift in Sources */,
+				5E1CCDBE26878F93F78B0416 /* CameraManager.swift in Sources */,
+				A6D6F972EF59CBBF1F1800D3 /* CameraPreviewView.swift in Sources */,
+				EA4CBA6312629412F3889DB3 /* ConfettiData.swift in Sources */,
+				B46C56C6CA83C1B079856DC1 /* ContentView.swift in Sources */,
+				90DB8FF4B801CC37F134F3DC /* FrameTemplate.swift in Sources */,
+				9CB62AC67ED83CA5804D60DB /* PhotoboothApp.swift in Sources */,
+				57065644724E58B42FE3C106 /* StripCompositor.swift in Sources */,
+				1EB515D56DBC66031501B429 /* StripLayout.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0CD60B31429FC3BF95D7736E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		46F6F74DC96399CE4A6DBDA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Photobooth/Resources/Photobooth.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Photobooth/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mynameish4r01d.photobooth;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		6E2EA2A9F4444919C96A2B0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A1138E89870D9E2EB1130F35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Photobooth/Resources/Photobooth.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Photobooth/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mynameish4r01d.photobooth;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8AE6C342CDF14534EC03B179 /* Build configuration list for PBXNativeTarget "Photobooth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46F6F74DC96399CE4A6DBDA7 /* Debug */,
+				A1138E89870D9E2EB1130F35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E53DACA68615C092A1AF09BD /* Build configuration list for PBXProject "Photobooth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E2EA2A9F4444919C96A2B0C /* Debug */,
+				0CD60B31429FC3BF95D7736E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 63A721B30C25217930E46266 /* Project object */;
+}

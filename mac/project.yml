@@ -1,0 +1,37 @@
+name: Photobooth
+options:
+  bundleIdPrefix: com.mynameish4r01d
+  deploymentTarget:
+    macOS: "13.0"
+
+targets:
+  Photobooth:
+    type: application
+    platform: macOS
+    sources:
+      - path: Photobooth
+        excludes:
+          - "Resources/Info.plist"
+          - "Resources/Photobooth.entitlements"
+    info:
+      path: Photobooth/Resources/Info.plist
+      properties:
+        NSCameraUsageDescription: "Photobooth needs your camera to take photo-strip pictures."
+        LSApplicationCategoryType: public.app-category.photography
+    entitlements:
+      path: Photobooth/Resources/Photobooth.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.device.camera: true
+        com.apple.security.files.user-selected.read-write: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.mynameish4r01d.photobooth
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        SWIFT_VERSION: "5.0"
+        CODE_SIGN_STYLE: Automatic
+        ENABLE_HARDENED_RUNTIME: true
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        GENERATE_INFOPLIST_FILE: false

@@ -1,0 +1,7 @@
+# Xcode
+mac/**/xcuserdata/
+mac/**/*.xcuserstate
+mac/DerivedData/
+mac/build/
+*.dSYM.zip
+*.dSYM
