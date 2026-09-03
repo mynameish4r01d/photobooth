@@ -52,6 +52,23 @@ mac/
 **Save to Downloads** opens a standard macOS save dialog defaulted to your
 Downloads folder — pick the filename/location and confirm.
 
+## App icon
+
+`icon-source-1024.png` is the 1024×1024 master (camera + lens + flash
+sparkle on the app's pink→violet gradient, corners pre-masked to match
+macOS's squircle icon shape). The sizes in
+`Photobooth/Resources/Assets.xcassets/AppIcon.appiconset/` are generated
+from it via `sips`; regenerate them if you edit the master:
+
+```bash
+SRC=icon-source-1024.png
+DEST=Photobooth/Resources/Assets.xcassets/AppIcon.appiconset
+for entry in 16:1 16:2 32:1 32:2 128:1 128:2 256:1 256:2 512:1 512:2; do
+  base=${entry%%:*}; scale=${entry##*:}; px=$((base * scale))
+  sips -z $px $px "$SRC" --out "$DEST/icon_${base}x${base}@${scale}x.png"
+done
+```
+
 ## Custom frames
 
 **Choose Frame Image…** lets you pick any PNG/JPEG/TIFF image as a frame
